@@ -1,12 +1,24 @@
 #!/usr/bin/env bash
 
+# Variables to avoid repeated calls to tput
+for n in {0..15}; do
+  declare C$n=$(tput setaf $n)
+done
+CR=$(tput sgr0)
+CS0=$(tput sgr 0)
+
 # Define traps and trapfunctions early in case any errors before script exits
 GLOBAL_VAR_CLEANUP(){
+  echo "Cleanup up..."
   [[ -n "$(command -v TILIX_TMP_CLEANUP)" ]] && TILIX_TMP_CLEANUP
+  [[ -n "$(command -v ALACRITTY_APPLY_TMP_CLEANUP)" ]] && ALACRITTY_APPLY_TMP_CLEANUP
+  [[ -n "$(command -v TERMINATOR_APPLY_TMP_CLEANUP)" ]] && TERMINATOR_APPLY_TMP_CLEANUP
+  [[ -n "$(command -v APPLY_SCRIPT_TMP_CLEANUP)" ]] && APPLY_SCRIPT_TMP_CLEANUP
   unset PROFILE_NAME
   unset PROFILE_SLUG
   unset TILIX_RES
   unset TERMINAL
+  echo "Done"
 }
 
 trap 'GLOBAL_VAR_CLEANUP; trap - EXIT' EXIT HUP INT QUIT PIPE TERM
@@ -17,26 +29,85 @@ declare -a THEMES=(
   '3024-day.sh'
   '3024-night.sh'
   'aci.sh'
+  'acme.sh'
   'aco.sh'
   'adventure-time.sh'
   'afterglow.sh'
   'alien-blood.sh'
+  'apprentice.sh'
+  'arc-dark.sh'
+  'arc-light.sh'
   'argonaut.sh'
   'arthur.sh'
+  'astrodark.sh'
+  'atelier-cave.sh'
+  'atelier-dune.sh'
+  'atelier-estuary.sh'
+  'atelier-forest.sh'
+  'atelier-heath.sh'
+  'atelier-lakeside.sh'
+  'atelier-plateau.sh'
+  'atelier-savanna.sh'
+  'atelier-seaside.sh'
+  'atelier-sulphurpool.sh'
   'atom.sh'
   'aura.sh'
+  'ayaka.sh'
   'ayu-dark.sh'
   'ayu-light.sh'
   'ayu-mirage.sh'
   'azu.sh'
+  'base2tone-cave.sh'
+  'base2tone-desert.sh'
+  'base2tone-drawbridge.sh'
+  'base2tone-earth.sh'
+  'base2tone-evening.sh'
+  'base2tone-field.sh'
+  'base2tone-forest.sh'
+  'base2tone-garden.sh'
+  'base2tone-heath.sh'
+  'base2tone-lake.sh'
+  'base2tone-lavender.sh'
+  'base2tone-mall.sh'
+  'base2tone-meadow.sh'
+  'base2tone-morning.sh'
+  'base2tone-motel.sh'
+  'base2tone-pool.sh'
+  'base2tone-porch.sh'
+  'base2tone-sea.sh'
+  'base2tone-space.sh'
+  'base2tone-suburb.sh'
+  'base4tone-classic-a.sh'
+  'base4tone-classic-b.sh'
+  'base4tone-classic-c.sh'
+  'base4tone-classic-d.sh'
+  'base4tone-classic-e.sh'
+  'base4tone-classic-f.sh'
+  'base4tone-classic-i.sh'
+  'base4tone-classic-l.sh'
+  'base4tone-classic-o.sh'
+  'base4tone-classic-p.sh'
+  'base4tone-classic-q.sh'
+  'base4tone-classic-r.sh'
+  'base4tone-classic-s.sh'
+  'base4tone-classic-t.sh'
+  'base4tone-classic-u.sh'
+  'base4tone-classic-w.sh'
+  'base4tone-modern-c.sh'
+  'base4tone-modern-n.sh'
+  'base4tone-modern-w.sh'
   'belafonte-day.sh'
   'belafonte-night.sh'
   'bim.sh'
   'birds-of-paradise.sh'
   'blazer.sh'
+  'blue-dolphin.sh'
+  'blue-moon-light.sh'
+  'blue-moon.sh'
   'bluloco-light.sh'
   'bluloco-zsh-light.sh'
   'borland.sh'
+  'breadog.sh'
   'breath-darker.sh'
   'breath-light.sh'
   'breath-silverfox.sh'
@@ -44,8 +115,10 @@ declare -a THEMES=(
   'breeze.sh'
   'broadcast.sh'
   'brogrammer.sh'
+  'butrin.sh'
   'c64.sh'
   'cai.sh'
+  'campbell.sh'
   'catppuccin-frappe.sh'
   'catppuccin-latte.sh'
   'catppuccin-macchiato.sh'
@@ -54,6 +127,7 @@ declare -a THEMES=(
   'chalkboard.sh'
   'chameleon.sh'
   'ciapre.sh'
+  'city-lights.sh'
   'clone-of-ubuntu.sh'
   'clrs.sh'
   'cobalt-2.sh'
@@ -66,6 +140,7 @@ declare -a THEMES=(
   'desert.sh'
   'dimmed-monokai.sh'
   'dissonance.sh'
+  'doom-one.sh'
   'dracula.sh'
   'earthsong.sh'
   'elemental.sh'
@@ -75,21 +150,28 @@ declare -a THEMES=(
   'espresso-libre.sh'
   'espresso.sh'
   'everblush.sh'
-  'everforest-dark.sh'
-  'everforest-light.sh'
+  'everforest-dark-hard.sh'
+  'everforest-dark-medium.sh'
+  'everforest-dark-soft.sh'
+  'everforest-light-hard.sh'
+  'everforest-light-medium.sh'
+  'everforest-light-soft.sh'
   'fairy-floss-dark.sh'
   'fairy-floss.sh'
   'fishtank.sh'
   'flat-remix.sh'
   'flat.sh'
   'flatland.sh'
+  'flexoki-dark.sh'
+  'flexoki-light.sh'
   'foxnightly.sh'
   'freya.sh'
   'frontend-delight.sh'
   'frontend-fun-forrest.sh'
   'frontend-galaxy.sh'
   'geohot.sh'
-  'github.sh'
+  'github-dark.sh'
+  'github-light.sh'
   'gogh.sh'
   'gooey.sh'
   'google-dark.sh'
@@ -98,13 +180,18 @@ declare -a THEMES=(
   'grape.sh'
   'grass.sh'
   'gruvbox-dark.sh'
+  'gruvbox-material-dark.sh'
+  'gruvbox-material-light.sh'
   'gruvbox.sh'
+  'guezwhoz.sh'
   'hardcore.sh'
   'harper.sh'
   'hemisu-dark.sh'
   'hemisu-light.sh'
   'highway.sh'
   'hipster-green.sh'
+  'homebrew-light.sh'
+  'homebrew-ocean.sh'
   'homebrew.sh'
   'horizon-bright.sh'
   'horizon-dark.sh'
@@ -114,13 +201,16 @@ declare -a THEMES=(
   'ibm3270.sh'
   'ic-green-ppl.sh'
   'ic-orange-ppl.sh'
+  'iceberg.sh'
   'idle-toes.sh'
   'ir-black.sh'
   'jackie-brown.sh'
   'japanesque.sh'
   'jellybeans.sh'
   'jup.sh'
-  'kanagawa.sh'
+  'kanagawa-dragon.sh'
+  'kanagawa-lotus.sh'
+  'kanagawa-wave.sh'
   'kibble.sh'
   'kokuban.sh'
   'laserwave.sh'
@@ -137,8 +227,13 @@ declare -a THEMES=(
   'material.sh'
   'mathias.sh'
   'medallion.sh'
+  'minimalist-dark.sh'
+  'miramare.sh'
   'misterioso.sh'
-  'miu.sh'
+  'modus-operandi-tinted.sh'
+  'modus-operandi.sh'
+  'modus-vivendi-tinted.sh'
+  'modus-vivendi.sh'
   'molokai.sh'
   'mona-lisa.sh'
   'mono-amber.sh'
@@ -148,16 +243,24 @@ declare -a THEMES=(
   'mono-white.sh'
   'mono-yellow.sh'
   'monokai-dark.sh'
+  'monokai-pro-light-sun.sh'
+  'monokai-pro-light.sh'
+  'monokai-pro-machine.sh'
+  'monokai-pro-ocatagon.sh'
   'monokai-pro-ristretto.sh'
+  'monokai-pro-spectrum.sh'
   'monokai-pro.sh'
   'monokai-soda.sh'
+  'moonfly.sh'
   'morada.sh'
   'n0tch2k.sh'
+  'nanosecond.sh'
   'neon-night.sh'
   'neopolitan.sh'
   'nep.sh'
   'neutron.sh'
   'night-owl.sh'
+  'nightfly.sh'
   'nightlion-v1.sh'
   'nightlion-v2.sh'
   'nighty.sh'
@@ -166,16 +269,17 @@ declare -a THEMES=(
   'novel.sh'
   'obsidian.sh'
   'ocean-dark.sh'
-  'ocean.sh'
   'oceanic-next.sh'
   'ollie.sh'
   'omni.sh'
   'one-dark.sh'
   'one-half-black.sh'
   'one-light.sh'
+  'oxocarbon-dark.sh'
   'palenight.sh'
   'pali.sh'
   'panda.sh'
+  'paper.sh'
   'papercolor-dark.sh'
   'papercolor-light.sh'
   'paraiso-dark.sh'
@@ -189,6 +293,7 @@ declare -a THEMES=(
   'predawn.sh'
   'pro.sh'
   'purple-people-eater.sh'
+  'quiet.sh'
   'red-alert.sh'
   'red-sands.sh'
   'relaxed.sh'
@@ -200,6 +305,12 @@ declare -a THEMES=(
   'sat.sh'
   'sea-shells.sh'
   'seafoam-pastel.sh'
+  'selenized-black.sh'
+  'selenized-dark.sh'
+  'selenized-light.sh'
+  'selenized-white.sh'
+  'seoul256-light.sh'
+  'seoul256.sh'
   'seti.sh'
   'shaman.sh'
   'shel.sh'
@@ -216,6 +327,7 @@ declare -a THEMES=(
   'spacegray-eighties-dull.sh'
   'spacegray-eighties.sh'
   'spacegray.sh'
+  'sparky.sh'
   'spring.sh'
   'square.sh'
   'srcery.sh'
@@ -227,11 +339,29 @@ declare -a THEMES=(
   'synthwave-alpha.sh'
   'synthwave.sh'
   'teerb.sh'
+  'tempus-autumn.sh'
+  'tempus-classic.sh'
+  'tempus-dawn.sh'
+  'tempus-day.sh'
+  'tempus-dusk.sh'
+  'tempus-fugit.sh'
+  'tempus-future.sh'
+  'tempus-night.sh'
+  'tempus-past.sh'
+  'tempus-rift.sh'
+  'tempus-spring.sh'
+  'tempus-summer.sh'
+  'tempus-tempest.sh'
+  'tempus-totus.sh'
+  'tempus-warp.sh'
+  'tempus-winter.sh'
   'tender.sh'
   'terminal-basic.sh'
   'terminix-dark.sh'
   'thayer-bright.sh'
   'tin.sh'
+  'tiwahu-dark.sh'
+  'tiwahu-light.sh'
   'tokyo-night-light.sh'
   'tokyo-night-storm.sh'
   'tokyo-night.sh'
@@ -245,12 +375,15 @@ declare -a THEMES=(
   'twilight.sh'
   'ura.sh'
   'urple.sh'
+  'vacme.sh'
   'vag.sh'
+  'vaombe.sh'
   'vaughn.sh'
   'vibrant-ink.sh'
   'vs-code-dark.sh'
   'vs-code-light.sh'
   'warm-neon.sh'
+  'website.sh'
   'wez.sh'
   'wild-cherry.sh'
   'wombat.sh'
@@ -262,6 +395,8 @@ declare -a THEMES=(
 # Allow developer to change url to forked url for easier testing
 BASE_URL=${BASE_URL:-"https://raw.githubusercontent.com/Gogh-Co/Gogh/master"}
 PROGRESS_URL="https://raw.githubusercontent.com/phenonymous/shell-progressbar/1.0/progress.sh"
+
+SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 capitalize() {
   local ARGUMENT=$1
@@ -279,19 +414,68 @@ capitalize() {
 }
 
 
+# Used to get required python scripts, either from the internet or from local directory
+if [[ ! -f "${SCRIPT_PATH}/apply-alacritty.py" ]]; then
+  ALACRITTY_APPLY_TMP_CLEANUP() {
+    rm -rf "${GOGH_ALACRITTY_SCRIPT}"
+    unset GOGH_ALACRITTY_SCRIPT
+  }
+  export GOGH_ALACRITTY_SCRIPT="$(mktemp -t gogh.alacritty.XXXXXX)"
+  if [[ "$(uname)" = "Darwin" ]]; then
+    # OSX ships with curl and ancient bash
+    curl -so "${GOGH_ALACRITTY_SCRIPT}" "${BASE_URL}/apply-alacritty.py"
+  else
+    # Linux ships with wget
+    wget -qO "${GOGH_ALACRITTY_SCRIPT}" "${BASE_URL}/apply-alacritty.py"
+  fi
+fi
+
+
+# Used to get required python scripts, either from the internet or from local directory
+if [[ ! -e "${SCRIPT_PATH}/apply-terminator.py" ]]; then
+  TERMINATOR_APPLY_TMP_CLEANUP() {
+    rm -rf "${GOGH_TERMINATOR_SCRIPT}"
+    unset GOGH_TERMINATOR_SCRIPT
+  }
+  export GOGH_TERMINATOR_SCRIPT="$(mktemp -t gogh.terminator.XXXXXX)"
+  if [[ "$(uname)" = "Darwin" ]]; then
+    # OSX ships with curl and ancient bash
+    curl -so "${GOGH_TERMINATOR_SCRIPT}" "${BASE_URL}/apply-terminator.py"
+  else
+    # Linux ships with wget
+    wget -qO "${GOGH_TERMINATOR_SCRIPT}" "${BASE_URL}/apply-terminator.py"
+  fi
+fi
+
+
+# Used to get required shell scripts, either from the internet or from local directory
+if [[ ! -e "${SCRIPT_PATH}/apply-colors.sh" ]]; then
+  APPLY_SCRIPT_TMP_CLEANUP() {
+    rm -rf "${GOGH_APPLY_SCRIPT}"
+    unset GOGH_APPLY_SCRIPT
+  }
+  export GOGH_APPLY_SCRIPT="$(mktemp -t gogh.apply.XXXXXX)"
+  if [[ "$(uname)" = "Darwin" ]]; then
+    # OSX ships with curl and ancient bash
+    curl -so "${GOGH_APPLY_SCRIPT}" "${BASE_URL}/apply-colors.sh"
+  else
+    # Linux ships with wget
+    wget -qO "${GOGH_APPLY_SCRIPT}" "${BASE_URL}/apply-colors.sh"
+  fi
+fi
+
+
 set_gogh() {
   string=$1
   string_r="${string%???}"
   string_s=${string_r//\./_}
   result=$(capitalize "${string_s}")
-  url="${BASE_URL}/themes/$1"
+  url="${BASE_URL}/installs/$1"
 
   export {PROFILE_NAME,PROFILE_SLUG}="$result"
 
-  # Evaluate if Gogh was called from local source - i.e cloned repo
-  SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-  if [[ -e "${SCRIPT_PATH}/themes/$1" ]]; then
-    bash "${SCRIPT_PATH}/themes/$1"
+  if [[ -e "${SCRIPT_PATH}/installs/$1" ]]; then
+    bash "${SCRIPT_PATH}/installs/$1"
   else
     if [[ "$(uname)" = "Darwin" ]]; then
       # OSX ships with curl
@@ -311,7 +495,6 @@ remove_file_extension (){
 
 ### Get length of an array
 ARRAYLENGTH=${#THEMES[@]}
-NUM=1
 
 
 # |
@@ -328,12 +511,12 @@ if [[ ${COLUMNS:-$(tput cols)} -ge 80 ]]; then
   gogh_str+="                  ███    █████ ███  ███ ███  ███  ███  ███                      \n"
   gogh_str+="                   ███    ███  ███  ███ ███  ███  ███  ███                      \n"
   gogh_str+="                    █████████   ██████   ███████ ████ █████                     \n"
-  gogh_str+="    $(tput setaf 0)█████████$(tput setaf 1)█████████$(tput setaf 2)█████████$(tput setaf 3)█████████$(tput setaf 4)█████$(tput sgr 0)███$(tput setaf 4)█$(tput setaf 5)█████████$(tput setaf 6)█████████$(tput setaf 7)█████████    \n"
-  gogh_str+="    $(tput setaf 0)█████████$(tput setaf 1)█████████$(tput setaf 2)█████████$(tput setaf 3)█████████$(tput sgr 0)███$(tput setaf 4)██$(tput sgr 0)███$(tput setaf 4)█$(tput setaf 5)█████████$(tput setaf 6)█████████$(tput setaf 7)█████████    \n"
-  gogh_str+="    $(tput setaf 0)█████████$(tput setaf 1)█████████$(tput setaf 2)█████████$(tput setaf 3)█████████$(tput setaf 4)█$(tput sgr0)██████$(tput setaf 4)██$(tput setaf 5)█████████$(tput setaf 6)█████████$(tput setaf 7)█████████    \n"
-  gogh_str+="    $(tput setaf 8)█████████$(tput setaf 9)█████████$(tput setaf 10)█████████$(tput setaf 11)█████████$(tput setaf 12)█████████$(tput setaf 13)█████████$(tput setaf 14)█████████$(tput setaf 15)█████████$(tput sgr 0)    \n"
-  gogh_str+="    $(tput setaf 8)█████████$(tput setaf 9)█████████$(tput setaf 10)█████████$(tput setaf 11)█████████$(tput setaf 12)█████████$(tput setaf 13)█████████$(tput setaf 14)█████████$(tput setaf 15)█████████$(tput sgr 0)    \n"
-  gogh_str+="    $(tput setaf 8)█████████$(tput setaf 9)█████████$(tput setaf 10)█████████$(tput setaf 11)█████████$(tput setaf 12)█████████$(tput setaf 13)█████████$(tput setaf 14)█████████$(tput setaf 15)█████████$(tput sgr 0)    \n"
+  gogh_str+="    ${C0}█████████${C1}█████████${C2}█████████${C3}█████████${C4}█████${CS0}███${C4}█${C5}█████████${C6}█████████${C7}█████████    \n"
+  gogh_str+="    ${C0}█████████${C1}█████████${C2}█████████${C3}█████████${CS0}███${C4}██${CS0}███${C4}█${C5}█████████${C6}█████████${C7}█████████    \n"
+  gogh_str+="    ${C0}█████████${C1}█████████${C2}█████████${C3}█████████${C4}█${CR}██████${C4}██${C5}█████████${C6}█████████${C7}█████████    \n"
+  gogh_str+="    ${C8}█████████${C9}█████████${C10}█████████${C11}█████████${C12}█████████${C13}█████████${C14}█████████${C15}█████████${CS0}    \n"
+  gogh_str+="    ${C8}█████████${C9}█████████${C10}█████████${C11}█████████${C12}█████████${C13}█████████${C14}█████████${C15}█████████${CS0}    \n"
+  gogh_str+="    ${C8}█████████${C9}█████████${C10}█████████${C11}█████████${C12}█████████${C13}█████████${C14}█████████${C15}█████████${CS0}    \n"
   gogh_str+="                                                                                "
 
 
@@ -341,9 +524,9 @@ if [[ ${COLUMNS:-$(tput cols)} -ge 80 ]]; then
   sleep 2.5
 else
   echo -e "\nGogh\n"
-  for c in {0..15}; do
-    echo -n "$(tput setaf $c)█████$(tput sgr0)"
-    [[ $c == 7 ]] && echo # new line
+  for c in C{0..15}; do
+    echo -n "${!c}█████${CR}"
+    [[ $c == C7 ]] && echo # new line
   done
   echo
 fi
@@ -354,24 +537,46 @@ fi
 # |
 echo -e "\nThemes:\n"
 
-for TH in "${THEMES[@]}"; do
+# Cross-platform function to format theme names
+format_theme_name() {
+  local name="$1"
+  # Remove .sh extension and any other extensions
+  name="${name%.*}"
+  # Replace hyphens with spaces
+  name="${name//-/ }"
+  # Capitalize first letter of each word using awk (cross-platform)
+  echo "$name" | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)} 1'
+}
 
-  KEY=$(printf "%02d" $NUM)
-  FILENAME=${TH::$((${#TH}-3))}
-  FILENAME_SPACE=${FILENAME//-/ }
+# Column display of available themes
+# Note: /usr/bin/column uses tabs and does not support ANSI codes yet (merged but not released)
+MAXL=$(( $(printf "%s\n" "${THEMES[@]}" | wc -L) - 3 )) # Biggest theme name without the extension
+NCOLS=$(( ${COLUMNS:-$(tput cols)} / (10+MAXL) ))       # number of columns, 10 is the length of '  ( xxx ) '
+NROWS=$(( (ARRAYLENGTH-1)/NCOLS + 1 ))                  # number of rows
+row=0
 
-  echo -e "    ($(tput setaf 4) $KEY $(tput sgr0)) $(capitalize "${FILENAME_SPACE}")"
-
-  ((NUM++))
-
+while ((row < NROWS)); do
+  col=0
+  while ((col < NCOLS)); do
+    NUM=$((col*NROWS+row))
+    NAME="${THEMES[$NUM]}"
+    if [[ -n $NAME ]]; then
+      FORMATTED_NAME=$(format_theme_name "$NAME")
+      printf "  ( ${C4}%3d${CR} ) %-${MAXL}s" $((NUM+1)) "$FORMATTED_NAME"
+    fi
+    ((col++))
+  done
+  echo
+  ((row++))
 done
-echo -e "    ($(tput setaf 4) ALL $(tput sgr0)) All themes"
+
+echo -e "  (${C4} ALL ${CR}) All themes"
 
 # |
 # | ::::::: Select Option
 # |
-echo -e "\nUsage : Enter Desired Themes Numbers ($(tput setaf 4)OPTIONS$(tput sgr0)) Separated By A Blank Space"
-echo -e "        Press $(tput setaf 4)ENTER$(tput sgr0) without options to Exit\n"
+echo -e "\nUsage : Enter Desired Themes Numbers (${C4}OPTIONS${CR}) Separated By A Blank Space"
+echo -e "        Press ${C4}ENTER${CR} without options to Exit\n"
 read -r -p 'Enter OPTION(S) : ' -a OPTION
 
 # Automagically generate options if user opts for all themes
@@ -391,6 +596,10 @@ if [[ -z "${TERMINAL:-}" ]]; then
     TERMINAL="mintty"
   elif [[ "$TERM" = "xterm-kitty" ]]; then
     TERMINAL="kitty"
+  elif [[ "${TERM}" = "linux" ]]; then
+    TERMINAL="linux"
+  elif [[ "${HOME}" = *com.termux* ]]; then
+    TERMINAL="termux"
   else
     # |
     # | Depending on how the script was invoked, we need
@@ -443,7 +652,7 @@ if [[ "$TERMINAL" = "tilix" ]] && [[ ${#OPTION[@]} -gt 0 ]]; then
       exit 0
     }
 
-    scratchdir=$(mktemp -d -t tmp.XXXXXXXX)
+    scratchdir=$(mktemp -d -t gogh.tilix.XXXXXXXX)
     export scratchdir
   fi
 fi
@@ -461,9 +670,9 @@ export TERMINAL LOOP OPTLENGTH=${#OPTION[@]}
 # |
 
 declare color_dot_str
-for c in {0..15}; do
-  color_dot_str+="$(tput setaf $c)•$(tput sgr0)"
-  [[ $c == 7 ]] && color_dot_str+=" "
+for c in C{0..15}; do
+  color_dot_str+="${!c}•${CR}"
+  [[ $c == C7 ]] && color_dot_str+=" "
 done
 
 # Note:
@@ -488,7 +697,7 @@ for OP in "${OPTION[@]#0}"; do
     SET_THEME="${THEMES[((OP-1))]}"
     set_gogh "${SET_THEME}"
   else
-    echo -e "$(tput setaf 1) ~ INVALID OPTION! ~$(tput sgr0)"
+    echo -e "${C1} ~ INVALID OPTION! ~${CR}"
     exit 1
   fi
 done

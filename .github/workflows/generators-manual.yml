@@ -1,0 +1,51 @@
+name: "🛠️ - Run Generators Manually"
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: action-generator-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: 🏅 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🏅 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
+
+      - name: 🏅 Install Python dependencies
+        run: python -m pip install -r requirements.txt --root-user-action=ignore
+
+      - name: 🏅 Generate themes JSON
+        run: python tools/pipe-generateJson.py
+
+      - name: 🏅 Generate JSON files
+        run: python tools/pipe-generateJsonFiles.py
+
+      - name: 🏅 Generate TXT files
+        run: python tools/pipe-generateTxtFiles.py
+
+      - name: 🏅 Generate CSV
+        run: python tools/pipe-generateCsv.py
+
+      - name: 🏅 Generate installers
+        run: python tools/pipe-generateShFiles.py
+
+      - name: 🏅 Update themes in Gogh file
+        run: python tools/pipe-updateThemes.py
+
+      - name: 🏅 Set up Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: 🏅 Generate WCAG reports
+        run: deno run --allow-all tools/pipe-generateWcag.js
