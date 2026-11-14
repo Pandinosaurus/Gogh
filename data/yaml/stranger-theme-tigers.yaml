@@ -1,0 +1,26 @@
+name: Stranger Theme Tigers
+author: Stranger Theme (https://strangertheme.com)
+author_name: Stranger Theme
+author_url: https://strangertheme.com
+variant: dark
+color_01: '#404640'
+color_02: '#CC6666'
+color_03: '#B5BD68'
+color_04: '#F0C674'
+color_05: '#81A2BE'
+color_06: '#B294BB'
+color_07: '#8ABEB7'
+color_08: '#F5F5F5'
+color_09: '#758975'
+color_10: '#EA8484'
+color_11: '#D3DB86'
+color_12: '#FFE492'
+color_13: '#9FC0DC'
+color_14: '#D0B2D9'
+color_15: '#A8DCD5'
+color_16: '#FFFFFF'
+background: '#181E18'
+foreground: '#F5F5F5'
+cursor: '#F5F5F5'
+hash: b9233f7b3a4cfa6e6e831fdef1c85c6870c3202c25479a1d856e5d32f5572198
+hash_bg: 3cd02c83d1c92ae574b338c91c4fb6b32e662bf9ba2284a7ddae797f82819cdd

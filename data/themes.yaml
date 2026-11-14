@@ -27168,6 +27168,162 @@
   cursor: '#4C383B'
   hash: bb56dc35c3f72d2f7f17f48af00980b27a3aae22132526b6c304c9d3237572c1
   hash_bg: 585b1e79d8b15e48db2320ba1b42c98d31abda8bd7bb9eaa877a57439a12ca43
+- name: Stranger Theme Dimension X
+  author: Stranger Theme (https://strangertheme.com)
+  author_name: Stranger Theme
+  author_url: https://strangertheme.com
+  variant: dark
+  color_01: '#464242'
+  color_02: '#FF6B6B'
+  color_03: '#8FAE7E'
+  color_04: '#D19A66'
+  color_05: '#C678DD'
+  color_06: '#FF55AA'
+  color_07: '#7FB5B0'
+  color_08: '#E8D5D5'
+  color_09: '#9A7C7C'
+  color_10: '#FF8989'
+  color_11: '#ADCC9C'
+  color_12: '#EFB884'
+  color_13: '#E496FB'
+  color_14: '#FF73C8'
+  color_15: '#9DD3CE'
+  color_16: '#FFFFFF'
+  background: '#1E1A1A'
+  foreground: '#E8D5D5'
+  cursor: '#E8D5D5'
+  hash: 308ef26c12227eb83d4edb61adf5b8ce7f2ef9f4c95da96e9676c399e39d9996
+  hash_bg: d2381db009d648b8a647170f7ac43cfa3d0cfdc441711563ffeb73961867eae8
+- name: Stranger Theme Hawkins
+  author: Stranger Theme (https://strangertheme.com)
+  author_name: Stranger Theme
+  author_url: https://strangertheme.com
+  variant: dark
+  color_01: '#544A40'
+  color_02: '#BF616A'
+  color_03: '#A3BE8C'
+  color_04: '#EBCB8B'
+  color_05: '#81A1C1'
+  color_06: '#B48EAD'
+  color_07: '#88C0D0'
+  color_08: '#E8DCC8'
+  color_09: '#9E8766'
+  color_10: '#DD7F88'
+  color_11: '#C1DCAA'
+  color_12: '#FFE9A9'
+  color_13: '#9FBFDF'
+  color_14: '#D2ACCB'
+  color_15: '#A6DEEE'
+  color_16: '#FFFFFF'
+  background: '#2C2218'
+  foreground: '#E8DCC8'
+  cursor: '#E8DCC8'
+  hash: 93044dcad760e14fa69fd301160153db39b308a371db423d0b0893bb7f358fdf
+  hash_bg: a7028f30e9ad7bc35754b5aa80a15a61644edc15bb551cb61009026c77fa8146
+- name: Stranger Theme Starcourt
+  author: Stranger Theme (https://strangertheme.com)
+  author_name: Stranger Theme
+  author_url: https://strangertheme.com
+  variant: dark
+  color_01: '#424256'
+  color_02: '#FF6B6B'
+  color_03: '#00FA9A'
+  color_04: '#FFD700'
+  color_05: '#BA55D3'
+  color_06: '#FF1493'
+  color_07: '#00CED1'
+  color_08: '#EAEAEA'
+  color_09: '#8C77C3'
+  color_10: '#FF8989'
+  color_11: '#1EFFB8'
+  color_12: '#FFF51E'
+  color_13: '#D873F1'
+  color_14: '#FF32B1'
+  color_15: '#1EECEF'
+  color_16: '#FFFFFF'
+  background: '#1A1A2E'
+  foreground: '#EAEAEA'
+  cursor: '#EAEAEA'
+  hash: 505fe6f07bb1cdf5ce46c1e297dba241e47840c9dcee398f0862fdae7212d25c
+  hash_bg: 89f73ceafe2b4ef47ec6f8ce45ca0ed45184d5673a4dda886a6a4290b8be2db1
+- name: Stranger Theme The Lab
+  author: Stranger Theme (https://strangertheme.com)
+  author_name: Stranger Theme
+  author_url: https://strangertheme.com
+  variant: dark
+  color_01: '#42454E'
+  color_02: '#FF4136'
+  color_03: '#2ECC40'
+  color_04: '#FFDC00'
+  color_05: '#7FDBFF'
+  color_06: '#B10DC9'
+  color_07: '#39CCCC'
+  color_08: '#E0E5EC'
+  color_09: '#73879C'
+  color_10: '#FF5F54'
+  color_11: '#4CEA5E'
+  color_12: '#FFFA1E'
+  color_13: '#9DF9FF'
+  color_14: '#CF2BE7'
+  color_15: '#57EAEA'
+  color_16: '#FFFFFF'
+  background: '#1A1D26'
+  foreground: '#E0E5EC'
+  cursor: '#E0E5EC'
+  hash: dafcfc2402d75e0604db82f0f0143502d3dd467beedd194f3f2a50d30c53aa4a
+  hash_bg: 4b4c004f9c178ee9cfad3d4a8f9c0c22faee0df0d5cb971a9211ec7bf623da51
+- name: Stranger Theme Tigers
+  author: Stranger Theme (https://strangertheme.com)
+  author_name: Stranger Theme
+  author_url: https://strangertheme.com
+  variant: dark
+  color_01: '#404640'
+  color_02: '#CC6666'
+  color_03: '#B5BD68'
+  color_04: '#F0C674'
+  color_05: '#81A2BE'
+  color_06: '#B294BB'
+  color_07: '#8ABEB7'
+  color_08: '#F5F5F5'
+  color_09: '#758975'
+  color_10: '#EA8484'
+  color_11: '#D3DB86'
+  color_12: '#FFE492'
+  color_13: '#9FC0DC'
+  color_14: '#D0B2D9'
+  color_15: '#A8DCD5'
+  color_16: '#FFFFFF'
+  background: '#181E18'
+  foreground: '#F5F5F5'
+  cursor: '#F5F5F5'
+  hash: b9233f7b3a4cfa6e6e831fdef1c85c6870c3202c25479a1d856e5d32f5572198
+  hash_bg: 3cd02c83d1c92ae574b338c91c4fb6b32e662bf9ba2284a7ddae797f82819cdd
+- name: Stranger Theme Upside Down
+  author: Stranger Theme (https://strangertheme.com)
+  author_name: Stranger Theme
+  author_url: https://strangertheme.com
+  variant: dark
+  color_01: '#35393F'
+  color_02: '#E06C75'
+  color_03: '#98C379'
+  color_04: '#E5C07B'
+  color_05: '#61AFEF'
+  color_06: '#C678DD'
+  color_07: '#56B6C2'
+  color_08: '#F8F8F2'
+  color_09: '#7A8495'
+  color_10: '#FE8A93'
+  color_11: '#B6E197'
+  color_12: '#FFDE99'
+  color_13: '#7FCDFF'
+  color_14: '#E496FB'
+  color_15: '#74D4E0'
+  color_16: '#FFFFFF'
+  background: '#0D1117'
+  foreground: '#F8F8F2'
+  cursor: '#F8F8F2'
+  hash: 2be7ace589adb52004d289c7ef969ac202490372cd45ccb9578d9f1ae0500b4f
+  hash_bg: db7e8d8a9273c87d02700aba4fc3c0642bb95fad548f11c4049bfa3eb3fb6e23
 - name: Sublette
   author: sublee (https://github.com/sublee)
   author_name: sublee

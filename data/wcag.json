@@ -125020,6 +125020,723 @@
     }
   },
   {
+    "theme": "Stranger Theme Dimension X",
+    "background": "#1E1A1A",
+    "results": [
+      {
+        "Color": "Foreground",
+        "Hex": "#E8D5D5",
+        "Score": "AAA",
+        "Ratio": "12.2"
+      },
+      {
+        "Color": "color_01",
+        "Hex": "#464242",
+        "Score": "Fail",
+        "Ratio": "1.7"
+      },
+      {
+        "Color": "color_02",
+        "Hex": "#FF6B6B",
+        "Score": "AA",
+        "Ratio": "6.2"
+      },
+      {
+        "Color": "color_03",
+        "Hex": "#8FAE7E",
+        "Score": "AAA",
+        "Ratio": "7.0"
+      },
+      {
+        "Color": "color_04",
+        "Hex": "#D19A66",
+        "Score": "AAA",
+        "Ratio": "7.0"
+      },
+      {
+        "Color": "color_05",
+        "Hex": "#C678DD",
+        "Score": "AA",
+        "Ratio": "5.9"
+      },
+      {
+        "Color": "color_06",
+        "Hex": "#FF55AA",
+        "Score": "AA",
+        "Ratio": "5.9"
+      },
+      {
+        "Color": "color_07",
+        "Hex": "#7FB5B0",
+        "Score": "AAA",
+        "Ratio": "7.5"
+      },
+      {
+        "Color": "color_08",
+        "Hex": "#E8D5D5",
+        "Score": "AAA",
+        "Ratio": "12.2"
+      },
+      {
+        "Color": "color_09",
+        "Hex": "#9A7C7C",
+        "Score": "AA",
+        "Ratio": "4.6"
+      },
+      {
+        "Color": "color_10",
+        "Hex": "#FF8989",
+        "Score": "AAA",
+        "Ratio": "7.5"
+      },
+      {
+        "Color": "color_11",
+        "Hex": "#ADCC9C",
+        "Score": "AAA",
+        "Ratio": "9.8"
+      },
+      {
+        "Color": "color_12",
+        "Hex": "#EFB884",
+        "Score": "AAA",
+        "Ratio": "9.7"
+      },
+      {
+        "Color": "color_13",
+        "Hex": "#E496FB",
+        "Score": "AAA",
+        "Ratio": "8.3"
+      },
+      {
+        "Color": "color_14",
+        "Hex": "#FF73C8",
+        "Score": "AAA",
+        "Ratio": "7.0"
+      },
+      {
+        "Color": "color_15",
+        "Hex": "#9DD3CE",
+        "Score": "AAA",
+        "Ratio": "10.4"
+      },
+      {
+        "Color": "color_16",
+        "Hex": "#FFFFFF",
+        "Score": "AAA",
+        "Ratio": "17.2"
+      },
+      {
+        "Color": "cursor",
+        "Hex": "#E8D5D5",
+        "Score": "AAA",
+        "Ratio": "12.2"
+      }
+    ],
+    "scoreCounts": {
+      "AAA": 13,
+      "Fail": 1,
+      "AA": 4
+    }
+  },
+  {
+    "theme": "Stranger Theme Hawkins",
+    "background": "#2C2218",
+    "results": [
+      {
+        "Color": "Foreground",
+        "Hex": "#E8DCC8",
+        "Score": "AAA",
+        "Ratio": "11.5"
+      },
+      {
+        "Color": "color_01",
+        "Hex": "#544A40",
+        "Score": "Fail",
+        "Ratio": "1.8"
+      },
+      {
+        "Color": "color_02",
+        "Hex": "#BF616A",
+        "Score": "AA Large",
+        "Ratio": "3.8"
+      },
+      {
+        "Color": "color_03",
+        "Hex": "#A3BE8C",
+        "Score": "AAA",
+        "Ratio": "7.6"
+      },
+      {
+        "Color": "color_04",
+        "Hex": "#EBCB8B",
+        "Score": "AAA",
+        "Ratio": "10.0"
+      },
+      {
+        "Color": "color_05",
+        "Hex": "#81A1C1",
+        "Score": "AA",
+        "Ratio": "5.8"
+      },
+      {
+        "Color": "color_06",
+        "Hex": "#B48EAD",
+        "Score": "AA",
+        "Ratio": "5.5"
+      },
+      {
+        "Color": "color_07",
+        "Hex": "#88C0D0",
+        "Score": "AAA",
+        "Ratio": "7.8"
+      },
+      {
+        "Color": "color_08",
+        "Hex": "#E8DCC8",
+        "Score": "AAA",
+        "Ratio": "11.5"
+      },
+      {
+        "Color": "color_09",
+        "Hex": "#9E8766",
+        "Score": "AA",
+        "Ratio": "4.5"
+      },
+      {
+        "Color": "color_10",
+        "Hex": "#DD7F88",
+        "Score": "AA",
+        "Ratio": "5.5"
+      },
+      {
+        "Color": "color_11",
+        "Hex": "#C1DCAA",
+        "Score": "AAA",
+        "Ratio": "10.4"
+      },
+      {
+        "Color": "color_12",
+        "Hex": "#FFE9A9",
+        "Score": "AAA",
+        "Ratio": "13.0"
+      },
+      {
+        "Color": "color_13",
+        "Hex": "#9FBFDF",
+        "Score": "AAA",
+        "Ratio": "8.2"
+      },
+      {
+        "Color": "color_14",
+        "Hex": "#D2ACCB",
+        "Score": "AAA",
+        "Ratio": "7.8"
+      },
+      {
+        "Color": "color_15",
+        "Hex": "#A6DEEE",
+        "Score": "AAA",
+        "Ratio": "10.6"
+      },
+      {
+        "Color": "color_16",
+        "Hex": "#FFFFFF",
+        "Score": "AAA",
+        "Ratio": "15.6"
+      },
+      {
+        "Color": "cursor",
+        "Hex": "#E8DCC8",
+        "Score": "AAA",
+        "Ratio": "11.5"
+      }
+    ],
+    "scoreCounts": {
+      "AAA": 12,
+      "Fail": 1,
+      "AA Large": 1,
+      "AA": 4
+    }
+  },
+  {
+    "theme": "Stranger Theme Starcourt",
+    "background": "#1A1A2E",
+    "results": [
+      {
+        "Color": "Foreground",
+        "Hex": "#EAEAEA",
+        "Score": "AAA",
+        "Ratio": "14.2"
+      },
+      {
+        "Color": "color_01",
+        "Hex": "#424256",
+        "Score": "Fail",
+        "Ratio": "1.7"
+      },
+      {
+        "Color": "color_02",
+        "Hex": "#FF6B6B",
+        "Score": "AA",
+        "Ratio": "6.2"
+      },
+      {
+        "Color": "color_03",
+        "Hex": "#00FA9A",
+        "Score": "AAA",
+        "Ratio": "12.3"
+      },
+      {
+        "Color": "color_04",
+        "Hex": "#FFD700",
+        "Score": "AAA",
+        "Ratio": "12.2"
+      },
+      {
+        "Color": "color_05",
+        "Hex": "#BA55D3",
+        "Score": "AA Large",
+        "Ratio": "4.3"
+      },
+      {
+        "Color": "color_06",
+        "Hex": "#FF1493",
+        "Score": "AA",
+        "Ratio": "4.7"
+      },
+      {
+        "Color": "color_07",
+        "Hex": "#00CED1",
+        "Score": "AAA",
+        "Ratio": "8.7"
+      },
+      {
+        "Color": "color_08",
+        "Hex": "#EAEAEA",
+        "Score": "AAA",
+        "Ratio": "14.2"
+      },
+      {
+        "Color": "color_09",
+        "Hex": "#8C77C3",
+        "Score": "AA",
+        "Ratio": "4.5"
+      },
+      {
+        "Color": "color_10",
+        "Hex": "#FF8989",
+        "Score": "AAA",
+        "Ratio": "7.5"
+      },
+      {
+        "Color": "color_11",
+        "Hex": "#1EFFB8",
+        "Score": "AAA",
+        "Ratio": "13.0"
+      },
+      {
+        "Color": "color_12",
+        "Hex": "#FFF51E",
+        "Score": "AAA",
+        "Ratio": "14.9"
+      },
+      {
+        "Color": "color_13",
+        "Hex": "#D873F1",
+        "Score": "AA",
+        "Ratio": "6.2"
+      },
+      {
+        "Color": "color_14",
+        "Hex": "#FF32B1",
+        "Score": "AA",
+        "Ratio": "5.2"
+      },
+      {
+        "Color": "color_15",
+        "Hex": "#1EECEF",
+        "Score": "AAA",
+        "Ratio": "11.6"
+      },
+      {
+        "Color": "color_16",
+        "Hex": "#FFFFFF",
+        "Score": "AAA",
+        "Ratio": "17.1"
+      },
+      {
+        "Color": "cursor",
+        "Hex": "#EAEAEA",
+        "Score": "AAA",
+        "Ratio": "14.2"
+      }
+    ],
+    "scoreCounts": {
+      "AAA": 11,
+      "Fail": 1,
+      "AA": 5,
+      "AA Large": 1
+    }
+  },
+  {
+    "theme": "Stranger Theme The Lab",
+    "background": "#1A1D26",
+    "results": [
+      {
+        "Color": "Foreground",
+        "Hex": "#E0E5EC",
+        "Score": "AAA",
+        "Ratio": "13.3"
+      },
+      {
+        "Color": "color_01",
+        "Hex": "#42454E",
+        "Score": "Fail",
+        "Ratio": "1.8"
+      },
+      {
+        "Color": "color_02",
+        "Hex": "#FF4136",
+        "Score": "AA",
+        "Ratio": "4.9"
+      },
+      {
+        "Color": "color_03",
+        "Hex": "#2ECC40",
+        "Score": "AAA",
+        "Ratio": "7.9"
+      },
+      {
+        "Color": "color_04",
+        "Hex": "#FFDC00",
+        "Score": "AAA",
+        "Ratio": "12.4"
+      },
+      {
+        "Color": "color_05",
+        "Hex": "#7FDBFF",
+        "Score": "AAA",
+        "Ratio": "10.8"
+      },
+      {
+        "Color": "color_06",
+        "Hex": "#B10DC9",
+        "Score": "AA Large",
+        "Ratio": "3.0"
+      },
+      {
+        "Color": "color_07",
+        "Hex": "#39CCCC",
+        "Score": "AAA",
+        "Ratio": "8.6"
+      },
+      {
+        "Color": "color_08",
+        "Hex": "#E0E5EC",
+        "Score": "AAA",
+        "Ratio": "13.3"
+      },
+      {
+        "Color": "color_09",
+        "Hex": "#73879C",
+        "Score": "AA",
+        "Ratio": "4.5"
+      },
+      {
+        "Color": "color_10",
+        "Hex": "#FF5F54",
+        "Score": "AA",
+        "Ratio": "5.6"
+      },
+      {
+        "Color": "color_11",
+        "Hex": "#4CEA5E",
+        "Score": "AAA",
+        "Ratio": "10.6"
+      },
+      {
+        "Color": "color_12",
+        "Hex": "#FFFA1E",
+        "Score": "AAA",
+        "Ratio": "15.2"
+      },
+      {
+        "Color": "color_13",
+        "Hex": "#9DF9FF",
+        "Score": "AAA",
+        "Ratio": "14.0"
+      },
+      {
+        "Color": "color_14",
+        "Hex": "#CF2BE7",
+        "Score": "AA Large",
+        "Ratio": "4.1"
+      },
+      {
+        "Color": "color_15",
+        "Hex": "#57EAEA",
+        "Score": "AAA",
+        "Ratio": "11.5"
+      },
+      {
+        "Color": "color_16",
+        "Hex": "#FFFFFF",
+        "Score": "AAA",
+        "Ratio": "16.8"
+      },
+      {
+        "Color": "cursor",
+        "Hex": "#E0E5EC",
+        "Score": "AAA",
+        "Ratio": "13.3"
+      }
+    ],
+    "scoreCounts": {
+      "AAA": 12,
+      "Fail": 1,
+      "AA": 3,
+      "AA Large": 2
+    }
+  },
+  {
+    "theme": "Stranger Theme Tigers",
+    "background": "#181E18",
+    "results": [
+      {
+        "Color": "Foreground",
+        "Hex": "#F5F5F5",
+        "Score": "AAA",
+        "Ratio": "15.6"
+      },
+      {
+        "Color": "color_01",
+        "Hex": "#404640",
+        "Score": "Fail",
+        "Ratio": "1.8"
+      },
+      {
+        "Color": "color_02",
+        "Hex": "#CC6666",
+        "Score": "AA",
+        "Ratio": "4.6"
+      },
+      {
+        "Color": "color_03",
+        "Hex": "#B5BD68",
+        "Score": "AAA",
+        "Ratio": "8.4"
+      },
+      {
+        "Color": "color_04",
+        "Hex": "#F0C674",
+        "Score": "AAA",
+        "Ratio": "10.5"
+      },
+      {
+        "Color": "color_05",
+        "Hex": "#81A2BE",
+        "Score": "AA",
+        "Ratio": "6.3"
+      },
+      {
+        "Color": "color_06",
+        "Hex": "#B294BB",
+        "Score": "AA",
+        "Ratio": "6.3"
+      },
+      {
+        "Color": "color_07",
+        "Hex": "#8ABEB7",
+        "Score": "AAA",
+        "Ratio": "8.2"
+      },
+      {
+        "Color": "color_08",
+        "Hex": "#F5F5F5",
+        "Score": "AAA",
+        "Ratio": "15.6"
+      },
+      {
+        "Color": "color_09",
+        "Hex": "#758975",
+        "Score": "AA",
+        "Ratio": "4.5"
+      },
+      {
+        "Color": "color_10",
+        "Hex": "#EA8484",
+        "Score": "AA",
+        "Ratio": "6.6"
+      },
+      {
+        "Color": "color_11",
+        "Hex": "#D3DB86",
+        "Score": "AAA",
+        "Ratio": "11.5"
+      },
+      {
+        "Color": "color_12",
+        "Hex": "#FFE492",
+        "Score": "AAA",
+        "Ratio": "13.5"
+      },
+      {
+        "Color": "color_13",
+        "Hex": "#9FC0DC",
+        "Score": "AAA",
+        "Ratio": "8.9"
+      },
+      {
+        "Color": "color_14",
+        "Hex": "#D0B2D9",
+        "Score": "AAA",
+        "Ratio": "8.9"
+      },
+      {
+        "Color": "color_15",
+        "Hex": "#A8DCD5",
+        "Score": "AAA",
+        "Ratio": "11.2"
+      },
+      {
+        "Color": "color_16",
+        "Hex": "#FFFFFF",
+        "Score": "AAA",
+        "Ratio": "17.0"
+      },
+      {
+        "Color": "cursor",
+        "Hex": "#F5F5F5",
+        "Score": "AAA",
+        "Ratio": "15.6"
+      }
+    ],
+    "scoreCounts": {
+      "AAA": 12,
+      "Fail": 1,
+      "AA": 5
+    }
+  },
+  {
+    "theme": "Stranger Theme Upside Down",
+    "background": "#0D1117",
+    "results": [
+      {
+        "Color": "Foreground",
+        "Hex": "#F8F8F2",
+        "Score": "AAA",
+        "Ratio": "17.8"
+      },
+      {
+        "Color": "color_01",
+        "Hex": "#35393F",
+        "Score": "Fail",
+        "Ratio": "1.6"
+      },
+      {
+        "Color": "color_02",
+        "Hex": "#E06C75",
+        "Score": "AA",
+        "Ratio": "5.9"
+      },
+      {
+        "Color": "color_03",
+        "Hex": "#98C379",
+        "Score": "AAA",
+        "Ratio": "9.4"
+      },
+      {
+        "Color": "color_04",
+        "Hex": "#E5C07B",
+        "Score": "AAA",
+        "Ratio": "11.0"
+      },
+      {
+        "Color": "color_05",
+        "Hex": "#61AFEF",
+        "Score": "AAA",
+        "Ratio": "8.0"
+      },
+      {
+        "Color": "color_06",
+        "Hex": "#C678DD",
+        "Score": "AA",
+        "Ratio": "6.4"
+      },
+      {
+        "Color": "color_07",
+        "Hex": "#56B6C2",
+        "Score": "AAA",
+        "Ratio": "8.0"
+      },
+      {
+        "Color": "color_08",
+        "Hex": "#F8F8F2",
+        "Score": "AAA",
+        "Ratio": "17.8"
+      },
+      {
+        "Color": "color_09",
+        "Hex": "#7A8495",
+        "Score": "AA",
+        "Ratio": "5.0"
+      },
+      {
+        "Color": "color_10",
+        "Hex": "#FE8A93",
+        "Score": "AAA",
+        "Ratio": "8.3"
+      },
+      {
+        "Color": "color_11",
+        "Hex": "#B6E197",
+        "Score": "AAA",
+        "Ratio": "12.8"
+      },
+      {
+        "Color": "color_12",
+        "Hex": "#FFDE99",
+        "Score": "AAA",
+        "Ratio": "14.6"
+      },
+      {
+        "Color": "color_13",
+        "Hex": "#7FCDFF",
+        "Score": "AAA",
+        "Ratio": "10.9"
+      },
+      {
+        "Color": "color_14",
+        "Hex": "#E496FB",
+        "Score": "AAA",
+        "Ratio": "9.1"
+      },
+      {
+        "Color": "color_15",
+        "Hex": "#74D4E0",
+        "Score": "AAA",
+        "Ratio": "11.0"
+      },
+      {
+        "Color": "color_16",
+        "Hex": "#FFFFFF",
+        "Score": "AAA",
+        "Ratio": "18.9"
+      },
+      {
+        "Color": "cursor",
+        "Hex": "#F8F8F2",
+        "Score": "AAA",
+        "Ratio": "17.8"
+      }
+    ],
+    "scoreCounts": {
+      "AAA": 14,
+      "Fail": 1,
+      "AA": 3
+    }
+  },
+  {
     "theme": "Sublette",
     "background": "#202535",
     "results": [
